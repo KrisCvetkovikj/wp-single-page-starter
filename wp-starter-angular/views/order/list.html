@@ -1,0 +1,41 @@
+<table class='table table-striped' st-table='rowCollection' st-safe-src='orders'>
+	<thead>
+		<tr>
+            <th st-sort='clientName'>Client name</th>
+            <th st-sort='clientAddress'>Client address</th>
+            <th st-sort='pizza.type'>Pizza</th>
+            <th></th>
+		</tr>
+		<tr>
+			<th> 
+				<input st-search='clientAddress' placeholder="search for address" class="input-sm form-control" type="search"/> 
+			</th>
+			<th></th>
+			<th> 
+				<input st-search='pizza.type' placeholder="search for type" class="input-sm form-control" type="search"/> 
+			</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr ng-repeat="order in rowCollection">
+			<td> {{order.clientAddress}} </td>
+			<td> {{order.clientName}} </td>
+			<td> {{order.pizza.type}} </td>
+			<td>
+				<button type="button" class="btn btn-sm btn-danger" 
+					ng-click="remove(order)" title="Cancel">
+				</button>
+			</td>			
+		</tr>
+	</tbody>
+
+	<tfoot>
+		<tr>
+			<td colspan="4" class="text-center">
+				<div st-pagination="" st-items-by-page="10"></div>
+			</td>
+		</tr>
+	</tfoot>
+
+</table>

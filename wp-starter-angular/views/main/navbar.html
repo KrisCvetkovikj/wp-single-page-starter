@@ -1,0 +1,16 @@
+<navbar class="navbar navbar-fixed-top">
+  <div id="navbar" class="navbar-collapse collapse">
+
+    <ul class="nav navbar-nav navbar-left">
+      <li
+        ui-sref-active="active"
+        ng-repeat="i in $root.menuItems">
+        <a ui-sref="{{ i.state }}">
+          <!--<i class="fa fa-fw {{ i.icon }}"></i>-->
+          {{ i.name | translate }}
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</navbar>

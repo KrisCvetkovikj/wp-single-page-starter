@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/wp-starter-angular node_modules"/>
+	<classpathentry kind="output" path="/home/k1ko/Documents/IdeaProjects/wp-lab3/out/production/wp-starter-angular"/>
+</classpath>

@@ -1,0 +1,33 @@
+<button class='btn btn-primary' ng-click='create()'>Make new pizza</button>
+<div class='panel panel-default'>	
+	<div class='panel-heading'>
+		<h1>Pizza types</h1>
+	</div>
+
+	<div class='panel-body'>
+		<ul class='list-group'>
+			<li class='list-group-item' ng-repeat='pizza in pizzas' ng-model='pizzaType'>
+				<span>{{pizza.type}}</span>
+				<button class='btn btn-link' ng-click="edit(pizza.id)">Edit</button>
+				<button class='btn btn-link link-danger' ng-click="delete(pizza.id)">Delete</button>
+			</li>	
+		</ul>
+	</div>
+</div>
+
+<div id='form' class='panel panel-default'>
+	<div class='panel-heading'>
+		<h1> {{header}} </h1>
+	</div>		
+
+	<div class='panel-body'>		
+		<form ng-submit=" form.$valid && store()" name='form' novalidate>
+			<div class='form-group'>
+				<label for='type'>Pizza type: </label>
+				<input type='text' id='type' name='type' ng-model='type' class='form-control' required />	
+			</div>
+
+			<button type='submit' class='btn btn-primary btn-block'> {{button}} </button>
+		</form>				  
+	</div>
+</div>

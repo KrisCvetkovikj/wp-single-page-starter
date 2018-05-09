@@ -1,0 +1,32 @@
+<div class='panel panel-default'>
+	<div class='panel-heading'>
+		<h1>Make new order</h1>
+	</div>
+
+	<div class='panel-body'>
+
+		<form ng-submit='form.$valid && create()' name='form'>
+			<div class='form-group'>
+				<label>Select type of pizza</label>
+				<select class='form-control' ng-model='pizza' name='type' required
+					ng-options="pizza as pizza.type for pizza in pizzaTypes track by pizza.id">
+				</select>				
+
+			</div>
+
+			<div class='form-group'>
+				<label for='name'>Enter recipient name:</label>
+				<input type='text' id='name' name='name' ng-model='name' class='form-control' required ng-pattern='/^[a-zA-Z]+$/' />
+
+			</div>
+
+			<div class='form-group'>
+				<label for='address'>Enter address:</label>
+				<input type='text' id='address' name='address' ng-model='address' class='form-control' required />
+
+			</div>
+
+			<button class='btn btn-primary btn-block'>Order</button>
+		</form>
+	</div>
+</div>
